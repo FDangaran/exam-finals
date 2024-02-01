@@ -7,22 +7,22 @@ import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 export default class NavBar extends Component {
     render() {
         return (
-            <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home">Grab Web</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Form inline className="d-flex align-items-center">
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button variant="outline-success"><FontAwesomeIcon icon={faSearch} /></Button>
+            <div className="d-inline justify-content-between">
+                <Navbar fixed="top" bg="light" variant="light">
+                    <Navbar.Brand href="#home">GrabFood</Navbar.Brand>
+                    <Form inline>
+                    <FormControl type="text" placeholder="Type your location" className="mr-sm-2" />
                     </Form>
-                        <Nav className="d-flex justify-content-end">
-                            <Nav.Link href="#restaurants">Restaurants</Nav.Link>
-                            <Nav.Link href="#deals">Deals</Nav.Link>
-                            <Nav.Link href="#orders">My Orders</Nav.Link>
-                            <Button variant="outline-primary"><FontAwesomeIcon icon={faUser} /></Button>
-                        </Nav>
-                </Navbar.Collapse>
-            </Navbar>
-        )
-    }
+                    <Nav className="ml-auto">
+                    <Nav.Link href="#bag">Bag</Nav.Link>
+                    <Nav.Link href="/Login">Login/Sign Up</Nav.Link>
+                    </Nav>
+                </Navbar>
+                <Form>
+                    <FormControl type="text" placeholder="Search for a dish or restaurant" className="mr-sm-2" />
+                </Form>
+            </div>
+  );
 }
+    }
+

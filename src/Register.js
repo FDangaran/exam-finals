@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import './style.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+
+  const navigate = useNavigate();
+
+  const handleRegister = () => {
+    navigate('/Login');
   };
 
   return (
@@ -36,7 +42,7 @@ const Register = () => {
           <input type="checkbox" onChange={togglePasswordVisibility} /> Show Password
         </p>
         <div className="form-group">
-          <button type="submit" name="register">Register</button>
+          <button type="button" name="register" onClick={handleRegister} >Register</button>
         </div>
         <div className="bottom-header">
           <p>Already have an account?<Link to="/Login"> Login here!</Link></p>

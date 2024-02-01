@@ -34,7 +34,7 @@ const Login = () => {
           <button type="button" name="login" onClick={handleLogin} >Login</button>
         </div>
         <div className="bottom-header">
-          <p>A new user?<Link to="/Register"> Register here!</Link></p>
+          <p>A new user?<Link to="/"> Register here!</Link></p>
         </div>
       </form>
     </div>
